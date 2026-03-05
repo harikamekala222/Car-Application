@@ -9,13 +9,11 @@ pipeline {
             }
         }
 
-        stage('Deploy Website') {
-            steps {
-                sh '''
-                cp -r * /var/www/html/
-                '''
-            }
+            stage('Deploy Website') {
+        steps {
+            sh 'cp -r * /var/www/html/'
         }
+    }    
 
     }
 }
